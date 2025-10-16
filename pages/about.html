@@ -34,6 +34,28 @@
                     <button id="btn" type="button">動作チェック</button>
                     <p id="msg">ボタンが効けばJSの読み込み成功です。</p>
                 </div>
+
+                <section aria-labelledby="form-title">
+                    <h2 id="form-title">自己紹介フォーム</h2>
+
+                    <form id="profile-form">
+                        <div class="form-row">
+                            <label for="name">お名前</label><br />
+                            <input id="name" name="name" type="text" rewuired placeholder="user name" />
+                        </div>
+
+                        <div class="form-row">
+                            <label for="bio">ひとこと紹介</label><br />
+                            <textarea id="bio" name="bio" rows="3" placeholder="フロントエンドを学習中です"></textarea>
+                        </div>
+
+                        <button type="submit">送信</button>
+                    </form>
+
+                    <div id="profile-result" class="card" aria-live="polite" style="margin-top: 1rem;">
+                        ここに入力結果が表示されます。（まだ未連動）
+                    </div>
+                </section>
             </section>
         </main>
 
