@@ -4,23 +4,32 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hello Web</title>
-  <style>
-    body { font-family: system-ui, sans-serif; margin: 2rem; }
-    .card { border: 1px solid #ddd; border-radius: 12px; padding: 1rem; }
-    button { padding: .5rem 1rem; border-radius: 8px; border: 1px solid #ccc; }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
 </head>
 <body>
-  <h1>はじめてのWebページ 🎉</h1>
-  <div class="card">
-    <p id="msg">ボタンを押してみてください。</p>
-    <button id="btn">クリック</button>
-  </div>
+  <a href="#main" class="skip-link">本文へスキップ</a>
 
-  <script>
-    document.getElementById('btn').addEventListener('click', () => {
-      document.getElementById('msg').textContent = 'クリックされました！';
-    });
-  </script>
+  <header role="banner">
+    <h1>初めてのWebページ</h1>
+    <nav aria-label="主要ナビゲーション">
+      <a href="./index.html" aria-current="page">ホーム</a>
+      <a href="#" aria-disabled="true">自己紹介</a>
+    </nav>
+  </header>
+
+  <main id="main" role="main">
+    <section aria-labelledby="demo-title">
+      <h2 id="dmeo-title">ボタンのデモ</h2>
+      <div class="card">
+        <p id="msg">ボタンを押してみてください。</p>
+        <button id="btn" type="button">クリック</button>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <small>&copy; 2025 My First Web</small>
+  </footer>
 </body>
 </html>
