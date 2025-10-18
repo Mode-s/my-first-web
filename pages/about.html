@@ -42,6 +42,7 @@
                         <div class="form-row">
                             <label for="name">お名前</label><br />
                             <input id="name" name="name" type="text" rewuired placeholder="user name" />
+                            <p id="name-error" class="error" aria-live="polite" hidden>お名前を入力してください</p>
                         </div>
 
                         <div class="form-row">
@@ -49,12 +50,14 @@
                             <textarea id="bio" name="bio" rows="3" placeholder="フロントエンドを学習中です"></textarea>
                         </div>
 
-                        <button type="submit">送信</button>
+                        <button id="submit-profile" type="submit" disabled>送信</button>
                     </form>
 
                     <div id="profile-result" class="card" aria-live="polite" style="margin-top: 1rem;">
                         ここに入力結果が表示されます。（まだ未連動）
                     </div>
+
+                    <button id="clear-profile" type="button" style="margin-top: 0.5rem;">保存データを消す</button>
                 </section>
             </section>
         </main>
